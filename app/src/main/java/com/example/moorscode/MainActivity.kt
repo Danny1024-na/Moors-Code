@@ -14,13 +14,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val convert= findViewById<Button>(R.id.button)
-        val toMoors = findViewById<RadioButton>(R.id.radioButton)
-        val toEnglish = findViewById<RadioButton>(R.id.radioButton2)
-        var resultText =findViewById<TextView>(R.id.textView3)
+        val toMorse = findViewById<RadioButton>(R.id.radioButton)
+        val toLetters = findViewById<RadioButton>(R.id.radioButton2)
+        var resultText =findViewById<TextView>(R.id.editTextText)
         var inputText =findViewById<TextInputEditText>(R.id.textInputEditText)
 
         convert.setOnClickListener {
-            if (toEnglish.isChecked)
+            if (toLetters.isChecked)
             {
                 val text = inputText.text.toString()
                 val s = text.split(" ").toTypedArray()
@@ -30,13 +30,16 @@ class MainActivity : AppCompatActivity() {
                 }
                 resultText.text=word
             }
-            if (toMoors.isChecked)
+            if (toMorse.isChecked)
             {
                 val text = inputText.text.toString()
                 val c: CharArray = text.toCharArray()
                 var word: String? = ""
-                for (i in c.indices) {
+                for (i in c.indices)
+                {
+                    word +="( ";
                     word += toMoors(c[i])
+                    word +=" )";
                 }
                 resultText.text=word
             }
@@ -100,7 +103,7 @@ class MainActivity : AppCompatActivity() {
             '"' -> ".-..-."
             '$' -> "...-..-"
             '@' -> ".--.-."
-            ' ' -> " "
+            ' ' -> "    "
             else -> null
         }
     }
@@ -162,6 +165,7 @@ class MainActivity : AppCompatActivity() {
             ".-..-." -> '"'
             "...-..-" -> '$'
             ".--.-." -> '@'
+            "/" -> ' '
             else -> 0.toChar()
         }
     }

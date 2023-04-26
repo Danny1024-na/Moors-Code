@@ -6,62 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:rotationX="0"
-        android:rotationY="0"
+        android:id="@+id/imageView4"
+        android:layout_width="485dp"
+        android:layout_height="782dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/img_20180909_224937" />
+        app:srcCompat="@drawable/background_holz_boden_horizental" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="136dp"
         android:layout_height="38dp"
-        android:text="Moors by DANNY"
+        android:text="Morse by DANNY"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText"
-        android:layout_width="344dp"
-        android:layout_height="75dp"
+        android:layout_width="365dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
         android:hint="type here"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        android:textColor="#000000"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="343dp"
-        android:layout_height="64dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="358dp"
+        android:layout_height="178dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="text"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
     <RadioGroup
+        android:id="@+id/radioGroup2"
         android:layout_width="130dp"
         android:layout_height="82dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="600dp"
+        android:layout_marginEnd="50dp"
         android:layout_marginBottom="5dp"
         android:rotationY="0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toEndOf="@+id/button"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.68">
@@ -73,14 +83,14 @@
             android:buttonTint="#E91D22"
             android:checked="true"
             android:clickable="true"
-            android:text="To Moors" />
+            android:text="To Morse" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:text="To English" />
+            android:text="To Letters" />
     </RadioGroup>
 
     <Button
@@ -88,11 +98,20 @@
         android:layout_width="128dp"
         android:layout_height="79dp"
         android:text="Convert"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.969" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="225dp"
+        android:layout_height="224dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/_612611943471_removebg_preview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
