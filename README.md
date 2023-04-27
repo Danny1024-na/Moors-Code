@@ -1,3 +1,4 @@
 # Moors-Code
 an Android's application to converting between Moors-Code and characters 
-![Screenshot_20230425_122749_Moors Code](https://user-images.githubusercontent.com/69569589/234250120-5c0bcf05-2b45-4579-be41-b4a80d593e5d.jpg)
+
+![photo_2023-04-27_21-57-27](https://user-images.githubusercontent.com/69569589/234977115-e5a17042-4c20-4c63-a40d-4180d069993e.jpg)
