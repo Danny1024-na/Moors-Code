@@ -1,11 +1,16 @@
 package com.example.moorscode
 
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.Switch
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.TooltipCompat
+import androidx.core.view.ViewCompat
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +23,10 @@ class MainActivity : AppCompatActivity() {
         val toLetters = findViewById<RadioButton>(R.id.radioButton2)
         var resultText =findViewById<TextView>(R.id.editTextText)
         var inputText =findViewById<TextInputEditText>(R.id.textInputEditText)
+
+        val fab=findViewById<Button>(R.id.info)
+
+        ViewCompat.setTooltipText(fab,"When u type in Morse code , type / between the words")
 
         convert.setOnClickListener {
             if (toLetters.isChecked)
@@ -44,8 +53,9 @@ class MainActivity : AppCompatActivity() {
                 resultText.text=word
             }
         }
-    }
 
+
+    }
 
     private fun toMoors(s: Char): String? {
         return when (s) {
