@@ -24,18 +24,13 @@ class MainActivity : AppCompatActivity() {
         var resultText =findViewById<TextView>(R.id.editTextText)
         var inputText =findViewById<TextInputEditText>(R.id.textInputEditText)
 
-        val fab=findViewById<Button>(R.id.info)
-
-        ViewCompat.setTooltipText(fab,"When u type in Morse code , type / between the words")
-
         convert.setOnClickListener {
             if (toLetters.isChecked)
             {
-                val text = inputText.text.toString()
-                val s = text.split(" ").toTypedArray()
+                val s = inputText.text.toString().split(" ").toTypedArray()
                 var word = ""
                 for (i in 0 until s.size) {
-                    word += toLanguage(s[i])
+                        word += toLanguage(s[i])
                 }
                 resultText.text=word
             }
@@ -119,64 +114,64 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun toLanguage(s: String): Char {
+    private fun toLanguage(s: String): String {
         return when (s) {
-            ".-" -> 'A'
-            "-..." -> 'B'
-            "-.-." -> 'C'
-            "-.." -> 'D'
-            "." -> 'E'
-            "..-." -> 'F'
-            "--." -> 'G'
-            "...." -> 'H'
-            ".." -> 'I'
-            ".---" -> 'J'
-            "-.-" -> 'K'
-            ".-.." -> 'L'
-            "--" -> 'M'
-            "-." -> 'N'
-            "---" -> 'O'
-            ".--." -> 'P'
-            "--.-" -> 'Q'
-            ".-." -> 'R'
-            "..." -> 'S'
-            "-" -> 'T'
-            "..-" -> 'U'
-            "...-" -> 'V'
-            ".--" -> 'W'
-            "-..-" -> 'X'
-            "-.--" -> 'Y'
-            "--.." -> 'Z'
-            "-----" -> '0'
-            ".----" -> '1'
-            "..---" -> '2'
-            "...--" -> '3'
-            "....-" -> '4'
-            "....." -> '5'
-            "-...." -> '6'
-            "--..." -> '7'
-            "---.." -> '8'
-            "----." -> '9'
-            ".-.-.-" -> '.'
-            "--..--" -> ','
-            "..--.." -> '?'
-            ".----." -> '\''
-            "-.-.--" -> '!'
-            "-..-." -> '/'
-            "-.--." -> '('
-            "-.--.-" -> ')'
-            ".-..." -> '&'
-            "---..." -> ':'
-            "-.-.-." -> ';'
-            "-...-" -> '='
-            ".-.-." -> '+'
-            "-....-" -> '-'
-            "..--.-" -> '_'
-            ".-..-." -> '"'
-            "...-..-" -> '$'
-            ".--.-." -> '@'
-            "/" -> ' '
-            else -> 0.toChar()
+            ".-" -> "A"
+            "-..." -> "B"
+            "-.-." -> "C"
+            "-.." -> "D"
+            "." -> "E"
+            "..-." -> "F"
+            "--." -> "G"
+            "...." -> "H"
+            ".." -> "I"
+            ".---" -> "J"
+            "-.-" -> "K"
+            ".-.." -> "L"
+            "--" -> "M"
+            "-." -> "N"
+            "---" -> "O"
+            ".--." -> "P"
+            "--.-" -> "Q"
+            ".-." -> "R"
+            "..." -> "S"
+            "-" -> "T"
+            "..-" -> "U"
+            "...-" -> "V"
+            ".--" -> "W"
+            "-..-" -> "X"
+            "-.--" -> "Y"
+            "--.." -> "Z"
+            "-----" -> "0"
+            ".----" -> "1"
+            "..---" -> "2"
+            "...--" -> "3"
+            "....-" -> "4"
+            "....." -> "5"
+            "-...." -> "6"
+            "--..." -> "7"
+            "---.." -> "8"
+            "----." -> "9"
+            ".-.-.-" -> "."
+            "--..--" -> ","
+            "..--.." -> "?"
+            ".----." -> "'"
+            "-.-.--" -> "!"
+            "-..-." -> "/"
+            "-.--." -> "("
+            "-.--.-" -> ")"
+            ".-..." -> "&"
+            "---..." -> ":"
+            "-.-.-." -> ";"
+            "-...-" -> "="
+            ".-.-." -> "+"
+            "-....-" -> "-"
+            "..--.-" -> "_"
+            ".-..-." -> "\""
+            "...-..-" -> "$"
+            ".--.-." -> "@"
+            "/" -> " "
+            else -> " Error "
         }
     }
 

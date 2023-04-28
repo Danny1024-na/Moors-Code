@@ -39,9 +39,9 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="18dp"
-        android:hint="type here"
+        android:hint="when u type Morse code using   ' - ' and ' . ', separate letters by spaces and words by '/' with a space before and a space after"
         android:textColor="#000000"
-        android:textSize="30sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,21 +78,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.989" />
-
-    <Button
-        android:id="@+id/info"
-        android:layout_width="103dp"
-        android:layout_height="38dp"
-        android:background="@drawable/round_btn"
-        android:text="Press and hold"
-        android:textColor="@color/white"
-        app:iconTint="#8B827D"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.016"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533" />
 
     <RadioGroup
         android:id="@+id/radioGroup2"
